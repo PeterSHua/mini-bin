@@ -1,8 +1,7 @@
-const express = require("express");
+import express from "express";
 const app = express();
-const cors = require("cors");
-const pool = require("./pool.js");
-const binRoutes = require("./controllers/binRoutes.js");
+import cors from "cors";
+import binRoutes from "./controllers/binRoutes.js";
 
 const requestLogger = (request, response, next) => {
   console.log("Method:", request.method);
@@ -36,4 +35,4 @@ app.use("/", binRoutes);
 app.use(unknownEndpoint);
 app.use(errorHandler);
 
-module.exports = app;
+export default app;

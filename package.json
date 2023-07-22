@@ -1,5 +1,5 @@
 {
-  "name": "inspector-hook-express",
+  "name": "mini-bin",
   "version": "0.1.0",
   "description": "A tool to inspect webhooks",
   "main": "index.js",
@@ -12,19 +12,27 @@
   "keywords": [
     "webhook"
   ],
-  "author": "Nodal Recall",
-  "license": "GPL-3.0-or-later",
+  "author": "Peter Hua",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "json-stringify-safe": "5.0.1",
     "morgan": "^1.10.0",
     "pg": "^8.10.0",
-    "json-stringify-safe": "5.0.1",
     "uuid": "9.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.32.0",
-    "nodemon": "^2.0.20"
-  }
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-standard-with-typescript": "^37.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^2.0.20",
+    "typescript": "^5.1.6"
+  },
+  "type": "module"
 }
