@@ -35,11 +35,6 @@ binRoutes.get("/:uuid", async (req, res) => {
   res.send(payloadRequests.rows).end();
 });
 
-// Delete bin
-binRoutes.delete("/:uuid", async (_req, _res) => {
-  //
-});
-
 // Deliver payload to bin
 binRoutes.post("/:uuid", async (req, res) => {
   const uuid = req.params.uuid;
