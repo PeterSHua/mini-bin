@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import io from "socket.io-client";
-const socket = io.connect("http://localhost:3001");
 
 import PayloadDetails from "./components/PayloadDetails";
 import PayloadList from "./components/PayloadList";
@@ -78,7 +76,7 @@ function App() {
           return <option>{bin}</option>;
         })}
       </Form.Select>
-      <Button onClick={createURL}>Create URL</Button>
+      <Button onClick={createURL}>Create Bin</Button>
       {url && <span className="url">{url}</span>}
     </div>
   );
