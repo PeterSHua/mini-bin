@@ -17,5 +17,3 @@ function PayloadDetails({ payload }) {
 }
 
 export default PayloadDetails;
-
-///We just need to retrieve from the database

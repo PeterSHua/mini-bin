@@ -26,10 +26,6 @@ function App() {
     })();
   }, []);
 
-  // let pathname = window.location.pathname;
-  // let dirs = pathname.split("/");
-  // let uuid = dirs[dirs.length - 1];
-
   async function onSelect(event) {
     let uuid = event.target.value;
     setDisplayPayload();
@@ -51,17 +47,6 @@ function App() {
       console.log("URL not created");
     }
   }
-
-  // useEffect(() => {
-  //   (async () => {
-  //     try {
-  //       let data = await binService.getAllPayloads(uuid);
-  //       setPayloads(data);
-  //     } catch {
-  //       console.log("Couldn't fetch payloads");
-  //     }
-  //   })();
-  // }, [uuid]);
 
   return (
     <div className="container">
