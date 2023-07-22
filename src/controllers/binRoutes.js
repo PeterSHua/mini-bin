@@ -1,24 +1,24 @@
 import { Router } from "express";
 import jsonStringifySafe from "json-stringify-safe";
-import pool from "../pool.js";
+import pool from "../db/pool.js";
 import { v4 as uuidv4 } from "uuid";
 
 const binRoutes = Router();
 
-binRoutes.get("/hook", async (req, res) => {
+binRoutes.get("/", async (req, res) => {
   const sql = "SELECT * FROM bin";
   const results = await pool.query(sql);
   res.send(results.rows).end();
 });
 
-binRoutes.get("/hook/new", async (req, res) => {
+binRoutes.get("/new", async (req, res) => {
   const uuid = uuidv4();
   const sql = "INSERT INTO bin (endpoint) VALUES ($1)";
   await pool.query(sql, [uuid]);
   res.send(uuid).end();
 });
 
-binRoutes.get("/hook/:uuid", async (req, res) => {
+binRoutes.get("/:uuid", async (req, res) => {
   const uuid = req.params.uuid;
   const sql = "SELECT id FROM bin WHERE endpoint=$1";
   const result = await pool.query(sql, [uuid]);
@@ -29,11 +29,11 @@ binRoutes.get("/hook/:uuid", async (req, res) => {
   res.send(payloadRequests.rows).end();
 });
 
-binRoutes.delete("/hook/:uuid", async (req, res) => {
+binRoutes.delete("/:uuid", async (req, res) => {
   //
 });
 
-binRoutes.post("/hook/:uuid", async (req, res) => {
+binRoutes.post("/:uuid", async (req, res) => {
   const uuid = req.params.uuid;
   const sql = "SELECT id FROM bin WHERE endpoint=$1";
   const result = await pool.query(sql, [uuid]);

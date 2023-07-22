@@ -31,7 +31,7 @@ app.use(requestLogger);
 app.use(express.static("build"));
 
 // ROUTES
-app.use("/", binRoutes);
+app.use("/bin", binRoutes);
 app.use(unknownEndpoint);
 app.use(errorHandler);
 
