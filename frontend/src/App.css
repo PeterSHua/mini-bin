@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+ul.request {
+  padding: 0px;
+  list-style: none;
+  border: 1px solid gray;
+  width: 20%;
+  border: 1px solid grey;
+  background-color: rgb(255, 251, 251);
+}
+
+li.http {
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  text-align: center;
+  cursor: pointer;
+  font-family: math;
+  font-size: 20px;
+  color: rgb(42, 161, 152);
+}
+
+.payload {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  top: 20%;
+  left: 30%;
+  position: absolute;
+  border: 1px solid grey;
+  background-color: rgb(244, 240, 240);
+}
+
+li.selected {
+  background-color: rgb(235, 230, 230);
+}
+
+div.payload ul {
+  list-style: none;
+  font-family: monospace;
+}
+
+.red {
+  color: red;
+}
+
+.form-select {
+  position: absolute;
+  top: 9%;
+  left: 60%;
+  width: 20%;
+}
+
+Button {
+  color: rgb(38, 139, 210);
+  position: absolute;
+  top: 9%;
+  left: 30%;
+}
+
+span.url {
+  font-size: 12px;
+  position: absolute;
+  width: 22%;
+  top: 11%;
+  left: 38%;
+}
+
+/*
+curren*/
