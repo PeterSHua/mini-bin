@@ -43,7 +43,7 @@ binRoutes.post("/:uuid", async (req, res) => {
   const id = result.rows[0].id;
 
   const timeStamp = new Date();
-  let reqPayload = jsonStringifySafe(req.body);
+  let reqPayload = jsonStringifySafe(req);
   const insertPayload = `INSERT INTO payload (http_request, http_timestamp, bin_id) VALUES ($1, $2, $3) RETURNING http_request`;
   await pool.query(insertPayload, [reqPayload, timeStamp, id]);
 
