@@ -1,13 +1,13 @@
 import express from "express";
 import cors from "cors";
 
-import binRoutes from "./controllers/binRoutes.js";
+import binRoutes from "./controllers/binRoutes";
 
 import {
   requestLogger,
   unknownEndpoint,
   errorHandler,
-} from "./middleware/middleware.js";
+} from "./middleware/middleware";
 
 const app = express();
 

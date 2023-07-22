@@ -1,6 +1,6 @@
 import { Router } from "express";
 import jsonStringifySafe from "json-stringify-safe";
-import pool from "../db/pool.js";
+import pool from "../db/pool";
 import { v4 as uuidv4 } from "uuid";
 
 const binRoutes = Router();
@@ -48,9 +48,9 @@ binRoutes.post("/:uuid", async (req, res) => {
   const id = result.rows[0].id;
 
   const timeStamp = new Date();
-  req = jsonStringifySafe(req);
+  let reqPayload = jsonStringifySafe(req);
   const insertPayload = `INSERT INTO payload (http_request, http_timestamp, bin_id) VALUES ($1, $2, $3) RETURNING http_request`;
-  await pool.query(insertPayload, [req, timeStamp, id]);
+  await pool.query(insertPayload, [reqPayload, timeStamp, id]);
 
   res.status(200).end();
 });
