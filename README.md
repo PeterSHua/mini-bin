@@ -1,4 +1,4 @@
-# MiniBin
+## MiniBin
 MiniBin is a tool for collecting and inspecting webhooks. Create endpoints for webhook providers and view webhook payloads.
 
 Backend: NGINX, Express, Postgres on Digital Ocean Droplet
